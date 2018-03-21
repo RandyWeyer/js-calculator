@@ -20,35 +20,31 @@ $(document).ready(function() {
     var divide = function (number1,number2) {
       return number1 / number2;
     };
-    alert("After declare var");
 
     var e = document.getElementById("modifier").value;
 
+      alert("e = " + e);
 
-    alert("After get modifier");
-
-    if (e="add") {
-      var finalResult = add(number1, number2);
-    }
-    if (e="subtract") {
-      var finalResult = subtract(number1, number2);
-    }
-    if (e="multiply") {
-      var finalResult = multiply(number1, number2);
-    }
-    if (e="divide") {
-      var finalResult = divide(number1, number2);
-    }
-
-    alert("After calculate");
+    if (e==="add") {
+      finalResult = add(number1, number2);
+      alert("e = " + e);
+    };
+    if (e==="subtract") {
+      finalResult = subtract(number1, number2);
+            alert("e = " + e);
+    };
+    if (e==="multiply") {
+      finalResult = multiply(number1, number2);
+            alert("e = " + e);
+    };
+    if (e==="divide") {
+      finalResult = divide(number1, number2);
+            alert("e = " + e);
+    };
 
     $("#answer").text(finalResult);
 
-    alert("After display answer");
-
-
     event.preventDefault();
 
-    alert("After everything");
   });
 });
