@@ -1,44 +1,61 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
-    <link rel="stylesheet" href="css/styles.css" type="text/css">
-    <script src="js/jquery-3.3.1.js"></script>
-    <script src="js/script.js"></script>
-    <title>Calculator</title>
-  </head>
-  <body>
-    <div class="container">
+<head>
+  <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <script src="js/jquery-3.3.1.js"></script>
+  <script src="js/script.js"></script>
+  <title>Calculator</title>
+</head>
+<body>
+  <div class="container">
     <h1>Calculator</h1>
 
-    <div class="row">
-      <!-- First number -->
-    <div class="col-md-3">
+    <form id="calculator">
+
+      <div class="row">
+        <!-- First number -->
+        <div class="col-md-3">
+          <label for="first-number">First Number:</label>
+          <input id="first-number" type="text">
+        </div>
+        <!-- End of first number -->
+
+        <!-- Starting modifier -->
+        <div class="col-md-1">
+          <select id="modifier">
+            <option value="add">+</option>
+            <option value="subtract">-</option>
+            <option value="multiply">*</option>
+            <option value="divide">/</option>
+          </select>
+        </div>
+
+        <!-- End of Modifier -->
+
+        <!-- Start second number -->
+        <div class="col-md-4">
+          <label for="second-number">Second Number:</label>
+          <input id="second-number" type="text">
+        </div>
+
+        <!-- End of Second Number -->
+        <!-- Button to calculate -->
+        <div class="col-md-1">
+          <button class="btn btn-primary" id="calculate">Calculate</button>
+        </div>
+        <!-- End of button to calculate -->
+
+        <!-- Begining of answer -->
+        <div class="col-md-3">
+          <label for="second-number">Answer:</label>
+          <p id="answer">Answer:</p>
+        </div>
+
+        <!-- End of answer -->
 
 
-    </div>
-<!-- End of first number -->
-
-<!-- Starting modifier -->
-    <div class="col-md-1">
-
-  </div>
-
-  <!-- End of Modifier -->
-
-<!-- Start second number -->
-<div class="col-md-3">
-
-</div>
-
-<!-- End of Second Number -->
-
-<!-- Begining of answer -->
-<div class="col-md-5">
-
-</div>
-
-<!-- End of answer -->
-  </div>
-  </body>
-</html>
+      </div>
+      <!-- End of row -->
+    </body>
+    </html>

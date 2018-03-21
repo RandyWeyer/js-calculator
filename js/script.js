@@ -1,32 +1,54 @@
-$(document).ready(function {
+$(document).ready(function() {
+
+  $("#calculator").submit(function(event) {
+
+    var number1 = parseInt($("input#first-number").val());
+    var number2 = parseInt($("input#second-number").val());
+
+    var add = function(number1, number2) {
+      return number1 + number2;
+    };
+
+    var subtract = function(number1, number2) {
+      return number1 - number2;
+    };
+
+    var multiply = function (number1,number2) {
+      return number1 * number2;
+    };
+
+    var divide = function (number1,number2) {
+      return number1 / number2;
+    };
+    alert("After declare var");
+
+    var e = document.getElementById("modifier").value;
 
 
-var add = function(number1, number2) {
-  return number1 + number2;
-};
+    alert("After get modifier");
 
-var subtract = function(number1, number2) {
-  return number1 - number2;
-};
+    if (e="add") {
+      var finalResult = add(number1, number2);
+    }
+    if (e="subtract") {
+      var finalResult = subtract(number1, number2);
+    }
+    if (e="multiply") {
+      var finalResult = multiply(number1, number2);
+    }
+    if (e="divide") {
+      var finalResult = divide(number1, number2);
+    }
 
-var multiply = function (number1,number2) {
-  return number1 * number2;
-};
+    alert("After calculate");
 
-var divide = function (number1,number2) {
-  return number1 / number2;
-};
+    $("#answer").text(finalResult);
 
-var number1 = parseInt(prompt("Enter a number:"));
-var number2 = parseInt(prompt("Enter another number:"));
-var result1 = add(number1, number2);
-var result2 = subtract(number1, number2);
-var result3 = multiply(number1, number2);
-var result4 = divide(number1, number2);
+    alert("After display answer");
 
-alert(result1);
-alert(result2);
-alert(result3);
-alert(result4);
 
+    event.preventDefault();
+
+    alert("After everything");
+  });
 });
