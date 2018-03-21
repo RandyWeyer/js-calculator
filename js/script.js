@@ -1,3 +1,6 @@
+$(document).ready(function {
+
+
 var add = function(number1, number2) {
   return number1 + number2;
 };
@@ -25,3 +28,5 @@ alert(result1);
 alert(result2);
 alert(result3);
 alert(result4);
+
+});
